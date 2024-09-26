@@ -41,33 +41,38 @@ header {
 }
 
 .sec {
-    margin-top: 51px;
+    margin-top: calc(6px + 51px);
 }
 
 .secb {
     padding: 61px;
     border: 1px solid #000;
-    width: 100%;
 } 
 
 #Inicio {
     background-color: #03A696;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
 }
 
 #Inicio p {
     font-size: 36px;
+    width: 50%;
+    text-align: center;
 }
 
 #Inicio img {
-    padding: 27px;
-    margin-right: 27px;
+    width: 50%;
 }
 
 #Portfolio {
     background-color: #497CBF;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
 .grid-container {
@@ -88,9 +93,13 @@ header {
     object-fit: cover; 
 }
 
+.grid-item img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
 #Servicios {
     background-color: #7CE658;
-    width: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -99,11 +108,12 @@ header {
 .servicio {
     color: #000;
     font-size: 16px;
-    margin-right: 91px;
-    margin-bottom: 16px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 61px;
+    margin-left: 61px;
+    margin-bottom: 16px;
 }
 
 .servicio p {
@@ -122,18 +132,16 @@ header {
 #Contacto {
     background-color: #025949;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: center;
 }
 
 #Contacto a{
-    padding: 6px;
+    margin-left: 3px;
     text-decoration: none;
     color: #000;
 }
 
-@media (max-width: 768px) {
-    #Inicio, #Portfolio, #Servicios, #Contacto {
-        background-attachment: scroll;
-    }
+#Contacto i{
+    margin-left: 6px;
 }
