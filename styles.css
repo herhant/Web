@@ -1,19 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/* COLORES: #252625, #BF8069, #497CBF, #03A696, #025949, #7CE658 */
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
 
-html {
-    font-family: 'Monserrat', sans-serif;
-}
-
 body {
-    background-color: #000;
-    width: 100%;
-    height: 100vh;
+    background-color: #252625;
     display: flex;
     flex-flow: column;
 }
@@ -22,7 +19,8 @@ header {
     position: fixed;
     width: 100%;
     padding: 6px;
-    background-color: #48DF6D;
+    background-color: #BF8069;
+    border: 1px solid #000;
 }
 
 .navbar {
@@ -32,9 +30,9 @@ header {
 }
 
 .navbar a {
-    text-decoration: none; 
+    text-decoration: none;
     padding: 6px;
-    color: #000; 
+    color: #000;
     font-size: 23px;
 }
 
@@ -43,17 +41,17 @@ header {
 }
 
 .sec {
-    margin-top: 61px;
+    margin-top: 51px;
 }
 
 .secb {
+    padding: 61px;
+    border: 1px solid #000;
     width: 100%;
-    padding: 23px;
-    border: 3px solid #000;
-}
+} 
 
 #Inicio {
-    background-color: #FF8C00;
+    background-color: #03A696;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -61,43 +59,81 @@ header {
 
 #Inicio p {
     font-size: 36px;
-    padding: 27px;
 }
 
 #Inicio img {
     padding: 27px;
+    margin-right: 27px;
 }
 
 #Portfolio {
-    background-color: #6D4798;
+    background-color: #497CBF;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, 100px); 
+    gap: 10px; 
+    padding: 10px;
+}
+
+.grid-item {
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
 
 #Servicios {
-    background-color: #F03AC1;
+    background-color: #7CE658;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
 }
-
-
-
-
 
 .servicio {
     color: #000;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    font-size: 16px;
+    margin-right: 91px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-.servicio h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+.servicio p {
+    padding: 3px;
+}
+
+.servicio i {
+    padding: 27px;
+    font-size: 91px;
 }
 
 .servicio-precio {
     font-weight: bold;
 }
 
-
 #Contacto {
-    background-color: #34DC43;
+    background-color: #025949;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+#Contacto a{
+    padding: 6px;
+    text-decoration: none;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    #Inicio, #Portfolio, #Servicios, #Contacto {
+        background-attachment: scroll;
+    }
 }
