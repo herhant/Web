@@ -22,6 +22,7 @@ header {
     background-color: #BF8069;
     border: 1px solid #000;
     z-index: 999;
+    
 }
 
 .navbar {
@@ -47,7 +48,6 @@ header {
 
 .secb {
     padding: 91px;
-    border: 1px solid #000;
 } 
 
 #Inicio {
@@ -120,6 +120,7 @@ header {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+    width: 100%;
 }
 
 .servicio {
@@ -127,10 +128,9 @@ header {
     font-size: 16px;
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     align-items: center;
-    margin-right: 61px;
-    margin-left: 61px;
-    margin-bottom: 16px;
+    padding: 27px;
 }
 
 .servicio p {
@@ -167,4 +167,93 @@ header {
 
 #Contacto i{
     margin-left: 6px;
+}
+
+/* Estilos para móviles */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-flow: row nowrap;
+    }
+    
+    .navbar a {
+        font-size: 18px; 
+        padding: 10px; 
+        flex: 1 1 auto;
+        text-align: center;
+    }
+
+    #Inicio {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    #Inicio p {
+        text-align: center;
+        font-size: 24px;
+        padding-left: 0px;
+        padding-top: 16px;
+    }
+
+    #Inicio img {
+        height: 300px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .secb {
+        padding: 27px;
+    }
+
+    #Servicios {
+        flex-flow: column nowrap;
+    }
+
+    .servicio {
+        padding: 15px;
+    }
+
+    .servicio i {
+        font-size: 50px;
+    }
+
+    #Contacto a {
+        font-size: 16px;
+    }
+
+    #Contacto i {
+        font-size: 30px;
+    }
+}
+
+/* Estilos para tablets */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .secb {
+        padding: 40px;
+    }
+
+    #Inicio img {
+        height: 450px;
+    }
+
+    #Inicio p {
+        font-size: 28px;
+        padding-left: 50px;
+    }
+
+    #Servicios {
+        flex-flow: row wrap;
+    }
+
+    .servicio i {
+        font-size: 70px;
+    }
 }
