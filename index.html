@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Hernán Zamora">
     <meta name="description" content="Portfolio de Hernán Zamora: Músico, fotógrafo y diseñador web. Servicios de fotografía, desarrollo web y edición de video.">
-    <meta name="keywords" content="FOTOGRAFIA, HTML, CSS, PHOTOGRAPHY, DESIGN WEB, DISEÑO WEB, PORTFOLIO, JAVASCRIPT" />
+    <meta name="keywords" content="FOTOGRAFIA, HTML, CSS, PHOTOGRAPHY, DESIGN WEB, DISEÑO WEB, PORTFOLIO, JAVASCRIPT"/>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Her Zamora</title>
@@ -13,14 +14,14 @@
 
 <body>
     <header>
-        <div class="navbar">
+        <nav class="navbar">
             <a href="#Inicio">INICIO</a>
             <a href="#Portfolio">PORTFOLIO</a>
             <a href="#Servicios">SERVICIOS</a>
             <a href="#Contacto">CONTACTO</a>
-        </div>
+        </nav>
     </header>
-    <div class="sec">
+    <main>
 
         <section class="secb" id="Inicio">
             <img src="./imagenes/foto6.jpg" alt="imagen del autor">
@@ -29,15 +30,15 @@
 
         <section class="secb" id="Portfolio">
             <div class="grid-container">
-                <div class="grid-item"><img src="./imagenes/foto3.jpg" alt="Descripción 1"></div>
-                <div class="grid-item"><img src="./imagenes/foto2.jpg" alt="Descripción 2"></div>
-                <div class="grid-item"><img src="./imagenes/foto10.jpg" alt="Descripción 3"></div>
-                <div class="grid-item"><img src="./imagenes/foto5.jpg" alt="Descripción 4"></div>
-                <div class="grid-item"><img src="./imagenes/foto1.jpg" alt="Descripción 5"></div>
-                <div class="grid-item"><img src="./imagenes/foto4.jpg" alt="Descripción 6"></div>
-                <div class="grid-item"><img src="./imagenes/foto7.jpg" alt="Descripción 7"></div>
-                <div class="grid-item"><img src="./imagenes/foto8.jpg" alt="Descripción 8"></div>
-                <div class="grid-item"><img src="./imagenes/foto9.jpg" alt="Descripción 9"></div>
+                <div class="grid-item"><img src="./imagenes/foto3.jpg" alt="Descripción 1" loading="lazy"></div>
+                <div class="grid-item"><img src="./imagenes/foto2.jpg" alt="Descripción 2" loading="lazy"></div>
+                <div class="grid-item"><img src="./imagenes/foto10.jpg" alt="Descripción 3" loading="lazy"></div>
+                <div class="grid-item"><img src="./imagenes/foto5.jpg" alt="Descripción 4" loading="lazy"></div>
+                <div class="grid-item"><img src="./imagenes/foto1.jpg" alt="Descripción 5" loading="lazy"></div>
+                <div class="grid-item"><img src="./imagenes/foto4.jpg" alt="Descripción 6" loading="lazy"></div>
+                <div class="grid-item"><img src="./imagenes/foto7.jpg" alt="Descripción 7" loading="lazy"></div>
+                <div class="grid-item"><img src="./imagenes/foto8.jpg" alt="Descripción 8" loading="lazy"></div>
+                <div class="grid-item"><img src="./imagenes/foto9.jpg" alt="Descripción 9" loading="lazy"></div>
             </div>
         </section>
 
@@ -55,7 +56,7 @@
                 <i class="fa-regular fa-window-maximize"></i>
                 <p class="servicio-descripcion">Desarrollo de sitio web responsivo</p>
                 <p class="servicio-precio">$191000</p>
-                <p class="servicio-descripcion">Desarrollo de sitio web responsivo + javascript</p>
+                <p class="servicio-descripcion tooltip">Desarrollo de sitio web responsivo + javascript<span class="tooltip-text">Se le agrega interactividad con javascript. Efectos visuales, herramientas, etc.</span></p>
                 <p class="servicio-precio">$272000</p>
             </div>
             <div class="servicio servicio-audio">
@@ -78,7 +79,7 @@
             <i class="fa-solid fa-envelope"></i><a href="">herhant@gmail.com</a>
             <i class="fa-brands fa-square-instagram"></i><a href="https://www.instagram.com/her.arw" target="_blank">her.arw</a>
         </section>
-    </div>
+    </main>
 
 
     <script src="./script.js"></script>

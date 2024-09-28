@@ -36,31 +36,20 @@ header {
     padding: 6px;
     color: #000;
     font-size: 23px;
+    font-weight: 423;
 }
 
 .navbar a:hover {
     text-decoration: underline;
 }
 
-.sec {
-    position: relative;
-    z-index: 1; 
+main {
     margin-top: calc(1px + 51px);
 }
 
 .secb {
-    padding: 91px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.3s ease-in-out;
+    padding: 5rem;
 } 
-
-.secb.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
 
 #Inicio {
     background-color: #03A696;
@@ -68,8 +57,6 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    z-index: 1;
-
 }
 
 #Inicio p {
@@ -164,9 +151,40 @@ header {
     font-weight: bold;
 }
 
+.servicio-descripcion {
+    margin-top: 6px;
+}
+
 .fa-video{
     position: relative;
     right: -12px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: -491%;
+    left: 91%;
+    margin-left: -100px; 
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
 }
 
 #Contacto {
@@ -188,23 +206,6 @@ header {
 }
 
 /* Animaciones */
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.secb {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s forwards; 
-}
 
 /* Estilos para móviles */
 
@@ -241,6 +242,10 @@ header {
         grid-template-columns: 1fr;
     }
 
+    .grid-item img {
+        height: 480px;
+    }
+
     .secb {
         padding: 27px;
     }
@@ -250,7 +255,7 @@ header {
     }
 
     .servicio {
-        padding: 15px;
+        padding: 9px;
     }
 
     .servicio i {
@@ -262,7 +267,7 @@ header {
     }
 
     #Contacto i {
-        font-size: 30px;
+        font-size: 19px;
     }
 }
 
