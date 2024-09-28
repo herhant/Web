@@ -136,6 +136,7 @@ main {
     flex-wrap: nowrap;
     align-items: center;
     padding: 27px;
+    text-align: center;
 }
 
 .servicio p {
@@ -271,12 +272,9 @@ main {
     }
 }
 
-/* Estilos para tablets */
+
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
     .secb {
         padding: 40px;
@@ -291,11 +289,22 @@ main {
         padding-left: 50px;
     }
 
+    .grid-item img {
+        height: 480px;
+        width: 100%;
+        object-fit: cover;
+    }
+
     #Servicios {
         flex-flow: row wrap;
     }
 
     .servicio i {
-        font-size: 70px;
+        font-size: 61px;
+    }
+    
+    .servicio-precio {
+        padding: px;
+
     }
 }
