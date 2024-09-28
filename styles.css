@@ -12,7 +12,8 @@
 body {
     background-color: #252625;
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
+    overflow-x: hidden;
 }
 
 header {
@@ -21,8 +22,7 @@ header {
     padding: 6px;
     background-color: #BF8069;
     border: 1px solid #000;
-    z-index: 999;
-    
+    z-index: 1000;
 }
 
 .navbar {
@@ -43,12 +43,24 @@ header {
 }
 
 .sec {
+    position: relative;
+    z-index: 1; 
     margin-top: calc(1px + 51px);
 }
 
 .secb {
     padding: 91px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.3s ease-in-out;
 } 
+
+.secb.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 
 #Inicio {
     background-color: #03A696;
@@ -56,6 +68,7 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 
 }
 
@@ -89,6 +102,8 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    padding-top: 91px;
+    min-height: 100vh;
 }
 
 .grid-container {
@@ -108,11 +123,14 @@ header {
     height: 100%; 
     object-fit: cover; 
     border-radius: 9px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform-origin: center;
 }
 
 .grid-item img:hover {
     transform: scale(0.95);
     transition: transform 0.3s ease;
+    box-shadow: 0px 6px 23px rgba(0, 0, 0, 0.5);
 }
 
 #Servicios {
@@ -167,6 +185,25 @@ header {
 
 #Contacto i{
     margin-left: 6px;
+}
+
+/* Animaciones */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.secb {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards; 
 }
 
 /* Estilos para móviles */
