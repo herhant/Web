@@ -42,12 +42,12 @@ header {
 }
 
 .navbar:hover {
-    opacity: 1; 
+    opacity: 1;
 }
 
 .navbar a:hover {
     text-decoration: underline;
-    color: #E5F5FA; 
+    color: #E5F5FA;
 }
 
 main {
@@ -57,7 +57,7 @@ main {
 .secb {
     padding: 5rem;
     border: 1px solid #000;
-} 
+}
 
 #Inicio {
     background-color: #03A696;
@@ -71,18 +71,23 @@ main {
     font-size: 36px;
     width: 50%;
     text-align: left;
-    padding-left: 106px;
+    padding-left: 127px;
+    transition: 0.91s;
 }
 
-.pi{
+#Inicio p:hover {
+    transform: scale(1.06);
+}
+
+.pi {
     display: block;
 }
 
-.pi1{
+.pi1 {
     display: block;
 }
 
-.pi2{
+.pi2 {
     color: white;
     font-size: 45px;
 }
@@ -90,6 +95,27 @@ main {
 #Inicio img {
     height: 690px;
     border-radius: 6px;
+}
+
+.animarimg {
+    position: relative;
+    left: -61%;
+    transition: all 0.6s ease;
+}
+
+.animarimg.in-view {
+    left: 0;
+}
+
+.animarp {
+    opacity: 0;
+    transform: translateY(91px);
+    transition: all 1s ease;
+}
+
+.animarp.in-view {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #Portfolio {
@@ -103,9 +129,9 @@ main {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: repeat(3, 1fr); 
-    gap: 16px; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 16px;
     padding: 10px;
 }
 
@@ -114,9 +140,9 @@ main {
 }
 
 .grid-item img {
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 9px;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     transform-origin: center;
@@ -165,7 +191,7 @@ main {
     margin-top: 6px;
 }
 
-.fa-video{
+.fa-video {
     position: relative;
     right: -12px;
 }
@@ -187,7 +213,7 @@ main {
     z-index: 1;
     bottom: -169%;
     left: 100%;
-    margin-left: -100px; 
+    margin-left: -100px;
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -197,17 +223,17 @@ main {
     opacity: 1;
 }
 
-.fotoseparador{
+.fotoseparador {
     position: relative;
     width: 100%;
-    min-height: 960px; 
+    min-height: 960px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.fotoseparador img{
+.fotoseparador img {
     position: absolute;
     top: 0;
     left: 0;
@@ -217,16 +243,16 @@ main {
 }
 
 
-.fs1{
-    background-image: url('./imagenes/foto14.jpg'); 
+.fs1 {
+    background-image: url('./imagenes/foto14.jpg');
 }
 
-.fs2{
-    background-image: url('./imagenes/foto15.jpg'); 
+.fs2 {
+    background-image: url('./imagenes/foto15.jpg');
 }
 
-.fs3{
-    background-image: url('./imagenes/foto11.jpg'); 
+.fs3 {
+    background-image: url('./imagenes/foto11.jpg');
 }
 
 #Contacto {
@@ -236,14 +262,14 @@ main {
     justify-content: center;
 }
 
-#Contacto a{
+#Contacto a {
     margin-left: 3px;
     text-decoration: none;
     color: #000;
     font-weight: bold;
 }
 
-#Contacto i{
+#Contacto i {
     margin-left: 6px;
 }
 
@@ -255,10 +281,10 @@ main {
     .navbar {
         flex-flow: row nowrap;
     }
-    
+
     .navbar a {
-        font-size: 18px; 
-        padding: 10px; 
+        font-size: 18px;
+        padding: 10px;
         flex: 1 1 auto;
         text-align: center;
     }
@@ -311,8 +337,9 @@ main {
     #Contacto i {
         font-size: 19px;
     }
+
     .fotoseparador {
-        background-attachment: scroll; 
+        display: none;
     }
 }
 
@@ -346,9 +373,13 @@ main {
     .servicio i {
         font-size: 61px;
     }
-    
+
     .servicio-precio {
         padding: px;
 
+    }
+
+    .fotoseparador {
+        display: none;
     }
 }
