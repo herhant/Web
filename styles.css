@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-/* COLORES: #252625, #BF8069, #497CBF, #03A696, #025949, #7CE658 */
+/* COLORES: #252625, #BF8069, #497CBF, #03A696, #025949, #68BF7F, #E5F5FA*/
 
 * {
     margin: 0;
@@ -23,6 +23,8 @@ header {
     background-color: #BF8069;
     border: 1px solid #000;
     z-index: 1000;
+    transition: opacity 0.5s ease;
+    opacity: 1;
 }
 
 .navbar {
@@ -39,8 +41,13 @@ header {
     font-weight: 423;
 }
 
+.navbar:hover {
+    opacity: 1; 
+}
+
 .navbar a:hover {
     text-decoration: underline;
+    color: #E5F5FA; 
 }
 
 main {
@@ -49,6 +56,7 @@ main {
 
 .secb {
     padding: 5rem;
+    border: 1px solid #000;
 } 
 
 #Inicio {
@@ -121,7 +129,7 @@ main {
 }
 
 #Servicios {
-    background-color: #7CE658;
+    background-color: #68BF7F;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -141,6 +149,7 @@ main {
 
 .servicio p {
     padding: 3px;
+    text-transform: uppercase;
 }
 
 .servicio i {
@@ -176,8 +185,8 @@ main {
     padding: 5px 0;
     position: absolute;
     z-index: 1;
-    bottom: -491%;
-    left: 91%;
+    bottom: -169%;
+    left: 100%;
     margin-left: -100px; 
     opacity: 0;
     transition: opacity 0.3s;
@@ -186,6 +195,38 @@ main {
 .tooltip:hover .tooltip-text {
     visibility: visible;
     opacity: 1;
+}
+
+.fotoseparador{
+    position: relative;
+    width: 100%;
+    min-height: 960px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fotoseparador img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.fs1{
+    background-image: url('./imagenes/foto14.jpg'); 
+}
+
+.fs2{
+    background-image: url('./imagenes/foto15.jpg'); 
+}
+
+.fs3{
+    background-image: url('./imagenes/foto11.jpg'); 
 }
 
 #Contacto {
@@ -269,6 +310,9 @@ main {
 
     #Contacto i {
         font-size: 19px;
+    }
+    .fotoseparador {
+        background-attachment: scroll; 
     }
 }
 
