@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Evento al pasar el cursor sobre la navbar (hover)
     navbar.addEventListener('mouseover', () => {
-        navbar.style.opacity = "1"; // Opacidad completa al hacer hover
+        navbar.style.opacity = "1"; 
     });
 
     // Evento al quitar el cursor de la navbar (mouseout)
@@ -57,3 +57,10 @@ function animarElementos() {
         texto.classList.remove('in-view');
     }
 }
+
+/* Animación portfolio */
+
+
+
+/* Animación separador*/
+
