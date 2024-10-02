@@ -28,7 +28,7 @@ header {
     position: fixed;
     width: 100%;
     padding: 6px;
-    background-color: #736763;
+    background-color: #BF5841;
     border: 1px solid #000;
     z-index: 1000;
     transition: opacity 0.5s ease;
@@ -43,7 +43,7 @@ header {
 
 .navbar a {
     text-decoration: none;
-    padding: 6px;
+    padding: 9px 16px;
     color: #000;
     font-size: 23px;
     font-weight: 423;
@@ -67,16 +67,17 @@ main {
 }
 
 #Inicio {
-    background-image: #403E3B;
+    background-image: #242625;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 #Inicio p {
     font-size: 36px;
-    color: #000;
+    color: #fff;
     width: 50%;
     text-align: left;
     padding-left: 127px;
@@ -97,7 +98,7 @@ main {
 }
 
 .pi2 {
-    color: #723873;
+    color: #4E7B62;
     font-size: 45px;
 }
 
@@ -163,72 +164,68 @@ main {
 .grid-item img:hover {
     transform: scale(0.95);
     transition: transform 0.3s ease;
-    box-shadow: 0px 6px 23px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 6px 9px rgba(0, 0, 0, 0.6);
 }
 
 #Servicios {
-    background-image: #403E3B;
+    background-image: #242625;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     width: 100%;
 }
 
-.servicio {
-    color: #000;
-    font-size: 16px;
+.servicios-container {
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    padding: 27px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #294033;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex-basis: calc(25% - 20px);
     text-align: center;
+    transition: transform 0.3s;
 }
 
-.servicio p {
-    padding: 3px;
-    text-transform: uppercase;
+.card:hover {
+    transform: translateY(-10px);
 }
 
-.servicio i {
-    padding: 27px;
-    font-size: 91px;
+.card i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.servicio-descripcion {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #fff;
 }
 
 .servicio-precio {
     font-weight: bold;
-}
-
-.servicio-descripcion {
-    margin-top: 6px;
-    color: #9FB9BF;
-    font-weight: bold;
-    text-shadow: 3px 3px 6px #;
-}
-
-.fa-video {
-    position: relative;
-    right: -12px;
-}
-
-.tooltip {
-    position: relative;
-    display: inline-block;
+    color: #BF5841;
 }
 
 .tooltip .tooltip-text {
     visibility: hidden;
-    width: 200px;
-    background-color: #000;
+    background-color: black;
     color: #fff;
     text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
+    border-radius: 5px;
+    padding: 5px;
     position: absolute;
     z-index: 1;
-    bottom: -169%;
-    left: 100%;
-    margin-left: -100px;
+    bottom: 125%; /* Muestra el tooltip sobre el texto */
+    left: 50%;
+    margin-left: -60px;
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -271,7 +268,7 @@ main {
 }
 
 #Contacto {
-    background-color: rgba(39, 64, 50, 0.9);
+    background-color: #16231C;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -280,28 +277,14 @@ main {
 #Contacto a {
     margin-left: 3px;
     text-decoration: none;
-    color: #000;
+    color: #fff;
     font-weight: bold;
 }
 
 #Contacto i {
     margin-left: 6px;
+    color: #fff;
 }
-
-.tabcontent {
-    display: none;
-  }
-  
-  .tablink {
-    padding: 10px;
-    cursor: pointer;
-    border: none;
-    background-color: #f1f1f1;
-  }
-  
-  .tablink:hover {
-    background-color: #ddd;
-  }
 
 /* Animaciones */
 
