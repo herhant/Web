@@ -18,7 +18,7 @@ Gris oscuro: #403E3B
 }
 
 body {
-    background-color: #252625;
+    background-color: #242625;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
@@ -168,7 +168,7 @@ main {
 }
 
 #Servicios {
-    background-image: #242625;
+    background-color: transparent !important;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -199,8 +199,9 @@ main {
 }
 
 .card i {
-    font-size: 2rem;
+    font-size: 91px;
     margin-bottom: 10px;
+    color: #425D4B;
 }
 
 .servicio-descripcion {
@@ -212,6 +213,7 @@ main {
 .servicio-precio {
     font-weight: bold;
     color: #BF5841;
+    font-size: 23px;
 }
 
 .tooltip .tooltip-text {
@@ -223,7 +225,7 @@ main {
     padding: 5px;
     position: absolute;
     z-index: 1;
-    bottom: 125%; /* Muestra el tooltip sobre el texto */
+    bottom: 125%;
     left: 50%;
     margin-left: -60px;
     opacity: 0;
