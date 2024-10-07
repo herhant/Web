@@ -59,5 +59,27 @@ function animarElementos() {
 }
 
 
-/* Animación separador*/
+/* Animación separador */
 
+window.addEventListener('scroll', () => {
+    const section = document.querySelector('.scroll-section');
+    const text = document.querySelector('.scroll-text');
+    const sectionPosition = section.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Umbral de visibilidad para iniciar la animación
+    const visibilityThreshold = 0.6; // Cambia este valor para ajustar cuándo comienza la animación
+
+    // Calcula cuánto de la sección está visible
+    const percentageVisible = (windowHeight - sectionPosition.top) / windowHeight;
+
+    // Aplica la animación solo cuando el porcentaje visible supera el umbral
+    if (percentageVisible > visibilityThreshold) {
+        const adjustedPercentage = (percentageVisible - visibilityThreshold) / (1 - visibilityThreshold);
+        text.style.opacity = adjustedPercentage;
+        text.style.transform = `translateX(${(1 - adjustedPercentage) * -100}px)`; // Mueve el texto desde la izquierda
+    } else {
+        text.style.opacity = 0;
+        text.style.transform = 'translateX(-100px)'; // Posición inicial del texto
+    }
+});
