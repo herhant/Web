@@ -58,8 +58,6 @@ function animarElementos() {
     }
 }
 
-/* Animación portfolio */
-
 
 /* Animación separador*/
 

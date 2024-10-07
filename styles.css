@@ -54,7 +54,6 @@ header {
 }
 
 .navbar a:hover {
-    text-decoration: underline;
     color: #E5F5FA;
 }
 
@@ -76,13 +75,14 @@ main {
 }
 
 #Inicio p {
-    font-size: 36px;
+    font-size: 33px;
     color: #fff;
     width: 50%;
     text-align: left;
     padding-left: 127px;
     transition: 0.91s;
     font-weight: 491;
+    text-transform: uppercase;
 }
 
 #Inicio p:hover {
@@ -93,13 +93,9 @@ main {
     display: block;
 }
 
-.pi1 {
-    display: block;
-}
-
 .pi2 {
     color: #4E7B62;
-    font-size: 45px;
+    font-size: 42px;
 }
 
 #Inicio img {
@@ -188,7 +184,7 @@ main {
     background-color: #294033;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 14px;
     flex-basis: calc(25% - 20px);
     text-align: center;
     transition: transform 0.3s;
@@ -200,21 +196,26 @@ main {
 
 .card i {
     font-size: 91px;
+    margin-top: 16px;
     margin-bottom: 10px;
     color: #425D4B;
 }
 
 .servicio-descripcion {
-    margin: 10px 0;
+    margin-top: 16px;
+    margin-bottom: 9px;
     font-size: 1rem;
     color: #fff;
+    text-transform: uppercase;
 }
 
 .servicio-precio {
     font-weight: bold;
     color: #BF5841;
     font-size: 23px;
+    margin-bottom: 16px;
 }
+
 
 .tooltip .tooltip-text {
     visibility: hidden;
@@ -270,25 +271,49 @@ main {
 }
 
 #Contacto {
-    background-color: #16231C;
+    background-color: #16231C; 
+    padding: 3px; 
+}
+
+.floating-icons {
+    position: fixed;
+    bottom: 91px;
+    right: 0.6px;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-direction: column;
+    gap: 14px;
+    animation: float 3s ease-in-out infinite;
 }
 
-#Contacto a {
-    margin-left: 3px;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
+.floating-icons a {
+    display: inline-block;
+    transition: transform 0.2s;
 }
 
-#Contacto i {
-    margin-left: 6px;
-    color: #fff;
+.floating-icons a:hover {
+    transform: scale(1.1);
 }
+
 
 /* Animaciones */
+
+@keyframes float {
+    0% {
+        transform: translatey(0);
+    }
+    50% {
+        transform: translatey(-5px);
+    }
+    100% {
+        transform: translatey(0);
+    }
+}
+
+.whatsapp-icon, .email-icon, .ig-icon {
+    width: 61px;
+    height: auto;
+    color: #fff;
+}
 
 /* Estilos para móviles */
 
