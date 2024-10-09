@@ -51,10 +51,6 @@ main {
     margin-top: calc(1px + 51px);
 }
 
-.secb {
-    padding: 5rem;
-}
-
 #Inicio {
     background-image: #242625;
     display: flex;
@@ -65,7 +61,7 @@ main {
 }
 
 #Inicio p {
-    font-size: 33px;
+    font-size: 27px;
     color: #fff;
     width: 50%;
     text-align: left;
@@ -89,7 +85,7 @@ main {
 }
 
 #Inicio img {
-    height: 690px;
+    height: 610px;
     border-radius: 6px;
 }
 
@@ -119,10 +115,6 @@ main {
 #Portfolio {
     background-image: linear-gradient(rgba(2, 83, 115, 0.7),
             rgba(159, 185, 191, 0.7));
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    padding-top: 91px;
     min-height: 100vh;
 }
 
@@ -131,7 +123,7 @@ main {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 16px;
-    padding: 10px;
+    padding: 23px;
 }
 
 .grid-item {
@@ -154,79 +146,35 @@ main {
 }
 
 #Servicios {
-    background-color: transparent !important;
+    background-color: #242625;
+    width: 100%;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
-    width: 100%;
+    font-size: 27px;
+    padding: 16px;
 }
 
-.servicios-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.card {
-    background-color: #294033;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 14px;
-    flex-basis: calc(25% - 20px);
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.card i {
-    font-size: 91px;
-    margin-top: 16px;
-    margin-bottom: 10px;
-    color: #425D4B;
-}
-
-.servicio-descripcion {
-    margin-top: 16px;
-    margin-bottom: 9px;
-    font-size: 1rem;
+.servicio {
+    padding: 27px;
     color: #fff;
-    text-transform: uppercase;
 }
 
-.servicio-precio {
-    font-weight: bold;
-    color: #BF5841;
-    font-size: 23px;
+.servicio h1 {
+    font-size: 1.4em;
     margin-bottom: 16px;
 }
 
-
-.tooltip .tooltip-text {
-    visibility: hidden;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    transition: opacity 0.3s;
+.servicio-descripcion {
+    font-size: 0.91em;
+    padding-bottom: 12px;
 }
 
-.tooltip:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
+.servicio-precio {
+    color: #BF5841; 
+    font-size: 1.27em;
+    padding-bottom: 9px;
 }
+
 
 .fotoseparador {
     position: relative;
@@ -249,7 +197,7 @@ main {
 
 
 .fs1 {
-    background-image: url('./imagenes/foto12.jpg');
+    background-image: url('./imagenes/foto14.jpg');
 }
 
 .fs2 {
@@ -319,31 +267,22 @@ main {
     color: #fff;
 }
 
-/* Estilos para móviles */
-
+/* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
-    .navbar {
-        flex-flow: row nowrap;
-    }
-
     .navbar a {
         font-size: 18px;
         padding: 10px;
-        flex: 1 1 auto;
-        text-align: center;
     }
 
     #Inicio {
         flex-direction: column;
-        flex-wrap: nowrap;
         align-items: center;
     }
 
     #Inicio p {
         text-align: center;
         font-size: 24px;
-        padding-left: 0px;
-        padding-top: 16px;
+        padding-left: 0;
     }
 
     #Inicio img {
@@ -354,76 +293,36 @@ main {
         grid-template-columns: 1fr;
     }
 
-    .grid-item img {
-        height: 480px;
+    .servicios-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .secb {
-        padding: 27px;
-    }
-
-    #Servicios {
-        flex-flow: column nowrap;
-    }
-
-    .servicio {
-        padding: 9px;
-    }
-
-    .servicio i {
-        font-size: 50px;
-    }
-
-    #Contacto a {
-        font-size: 16px;
-    }
-
-    #Contacto i {
-        font-size: 19px;
-    }
-
-    .fotoseparador {
-        display: none;
+    .card {
+        flex-basis: 90%;
     }
 }
 
-
-
+/* Media Queries para tabletas */
 @media (min-width: 769px) and (max-width: 1024px) {
-
-    .secb {
-        padding: 40px;
+    .navbar a {
+        font-size: 20px;
+        padding: 12px;
     }
 
     #Inicio img {
         height: 450px;
     }
 
-    #Inicio p {
-        font-size: 28px;
-        padding-left: 50px;
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
     }
 
-    .grid-item img {
-        height: 480px;
-        width: 100%;
-        object-fit: cover;
+    .servicios-container {
+        flex-wrap: wrap;
     }
 
-    #Servicios {
-        flex-flow: row wrap;
-    }
-
-    .servicio i {
-        font-size: 61px;
-    }
-
-    .servicio-precio {
-        padding: px;
-
-    }
-
-    .fotoseparador {
-        display: none;
+    .card {
+        flex-basis: 45%;
     }
 }
