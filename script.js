@@ -66,7 +66,7 @@ const section = document.querySelector('.scroll-section');
 const text = document.querySelector('.scroll-text');
 
 // Umbral de visibilidad para iniciar la animación
-const visibilityThreshold = 0.6;
+const visibilityThreshold = 0.1; // reduce el umbral para que el efecto inicie antes
 
 // Configuración del Intersection Observer
 const observer = new IntersectionObserver((entries) => {
@@ -77,19 +77,21 @@ const observer = new IntersectionObserver((entries) => {
             const windowHeight = window.innerHeight;
             const percentageVisible = (windowHeight - sectionPosition.top) / windowHeight;
 
-            // Aplica la animación solo cuando el porcentaje visible supera el umbral
-            if (percentageVisible > visibilityThreshold) {
-                const adjustedPercentage = (percentageVisible - visibilityThreshold) / (1 - visibilityThreshold);
-                text.style.opacity = adjustedPercentage;
-                text.style.transform = `translateX(${(1 - adjustedPercentage) * -100}px)`; // Mueve el texto desde la izquierda
-            } else {
-                text.style.opacity = 0;
-                text.style.transform = 'translateX(-100px)'; // Posición inicial del texto
-            }
+            // Ajusta el cálculo del efecto según el umbral
+            const adjustedPercentage = Math.max(0, (percentageVisible - visibilityThreshold) / (1 - visibilityThreshold));
+
+            // Actualiza la opacidad y transformación
+            text.style.opacity = adjustedPercentage;
+            text.style.transform = `translateX(${(1 - adjustedPercentage) * -50}px)`; // Mueve el texto desde la izquierda
+
+        } else {
+            // Restablece cuando la sección no es visible
+            text.style.opacity = 0;
+            text.style.transform = 'translateX(-50px)'; // Posición inicial del texto
         }
     });
 }, {
-    threshold: visibilityThreshold
+    threshold: [0.1, 0.3, 0.6, 1.0] // múltiplos umbrales para activar el efecto en varias posiciones
 });
 
 // Observa la sección deseada
